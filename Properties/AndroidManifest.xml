@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+	<application></application>
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<activity android:enabled="true" android:icon="@drawable/icon" android:label="GlassPrompter" android:name="glassprompter.Activity1">
+		<intent-filter>
+			<action android:name="android.intent.action.MAIN" />
+			<category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+		<intent-filter>
+			<action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+		</intent-filter>
+		<meta-data android:name="com.google.android.glass.VoiceTrigger" android:resource="@xml/my_voice_trigger" />
+	</activity>
+
+</manifest>
